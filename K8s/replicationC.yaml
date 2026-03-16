@@ -12,7 +12,7 @@ spec:
            labels:
               app: myapp
            spec:
-           container:
+            container:
               - name: myapp
                 image: nginx
                 ports:
