@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myreplicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spider
+  template:
+    metadata:
+      labels:
+        app: spider
+    spec:
+      containers:
+      - name: spider
+        image: nginx
+        ports:
+        - containerPort: 80git a
