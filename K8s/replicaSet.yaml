@@ -16,4 +16,4 @@ spec:
       - name: spider
         image: nginx
         ports:
-        - containerPort: 80git a
+        - containerPort: 80
