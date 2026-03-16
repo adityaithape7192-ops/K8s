@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod4
+spec:
+  containers:
+    - name: mypod4
+      image: adityaithape/b19:myhttpd
+      ports:
+       - containerPort: 80
