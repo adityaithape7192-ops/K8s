@@ -4,7 +4,7 @@ provider "aws"{
 resource "aws_instance" "myinstance" {
     ami = "ami-0f559c3642608c138"
     instance_type = "t3.micro"
-    key_name = "abcd.pem"
+    key_name = "abcd"
     vpc_security_group_ids = [ "sg-0be6230f73360a65c" ]
     tags = {
       name = "aditya"
