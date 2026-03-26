@@ -13,3 +13,4 @@ spec:
   - name: hostpath-storage
     persistentVolumeClaim:
       claimName: my-pvc
+      
