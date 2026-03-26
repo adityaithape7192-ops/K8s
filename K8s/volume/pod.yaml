@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app-pod
+spec:
+  containers:
+  - name: my-container
+    image: nginx
+    VolumeMounts:
+      name: hostpath:-storage
+      mountPath: /usr/local/apache2/htdocs/
+  Volumes: 
+  - name: hostpath:-storage
+    PersistentVolumeClaim:
+      claimName: my-hostpath-pvc
