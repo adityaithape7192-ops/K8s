@@ -1,25 +1,23 @@
 provider "aws" {
-  region = "ap-south-1"
+  region = var.rg
 }
-
 terraform {
   backend "s3" {
-    bucket = "terraform1112"
-    key    = "terraform.tfstate"
+    bucket = "terraform12123"
     region = "ap-south-1"
+    key = "tfstatefile"
   }
 }
 
 resource "aws_instance" "myinstance" {
-  ami                    = "ami-0f559c3642608c138"
-  instance_type          = "t3.micro"
-  key_name               = "id_rsa"
-  vpc_security_group_ids = ["sg-0be6230f73360a65c"]
-  availability_zone      = "ap-south-1a"
-
+  ami = var.ami_id
+  instance_type = var.instance_type_mumbai
+  key_name = var.key_name
+  vpc_security_group_ids = [data.aws_security_groups.mysg.id]
+  availability_zone = var.az
   tags = {
-    Name        = "myinstance"
+    name  = "suraj"
+    Name = "myinstance"
     Environment = "dev"
-    Owner       = "aditya"
   }
 }
