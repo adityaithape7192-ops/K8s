@@ -15,7 +15,7 @@ resource "aws_instance" "myinstance" {
   vpc_security_group_ids = "[mysg]"
   availability_zone = var.az
   tags = {
-    name  = "suraj"
+    name  = "aditya"
     Name = "myinstance"
     Environment = "dev"
   }
