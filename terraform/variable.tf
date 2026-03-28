@@ -1,5 +1,5 @@
 variable "ami_id" {
-  default = "ami-0f559c3642608c138"
+  default = "ami-05d2d839d4f73aafb"
   description = "ap-south-1_ami"
 }
 variable "instance_type_mumbai" {
@@ -9,7 +9,7 @@ variable "key_name" {
   default = "id_rsa"
 }
 variable "mysg" {
-  default = "sg-0882b4fee72084654"
+  default = "sg-0be6230f73360a65c"
 }
 variable "rg" {
   default = "ap-south-1"
