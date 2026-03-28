@@ -3,9 +3,9 @@ provider "aws" {
 }
 terraform {
   backend "s3" {
-    bucket = "terraform12123"
+    bucket = "terraform1112"
     region = "ap-south-1"
-    key = "tfstatefile"
+    key = "terraform1112"
   }
 }
 resource "aws_instance" "myinstance" {
