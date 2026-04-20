@@ -5,7 +5,7 @@ pipeline {
     stages{
         stage('pull') {
             steps {
-                git 'https://github.com/adityaithape7192-ops/Sport-shop-project-using-docker.git'
+                git 'https://github.com/adityaithape7192-ops/studentdata.git'
                 echo " pull successful"
             }
         }
